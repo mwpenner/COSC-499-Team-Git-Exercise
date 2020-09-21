@@ -25,8 +25,7 @@ public class Core {
 	    	case "-":
 	    		break;
 			case "*":
-				Multiplication myObject = new Multiplication();
-				finalNumber = myObject.multiplication(firstNumber, secondNumber);
+				finalNumber = Multiplication.multiplication(firstNumber, secondNumber);
 				System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
 	    		break;
     		default:
