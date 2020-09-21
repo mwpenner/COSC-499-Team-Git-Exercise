@@ -23,6 +23,9 @@ public class Core {
 	    	case "+":
 	    		break;
 	    	case "-":
+	    		Subtraction myObject = new Subtraction();
+	    		finalNumber = myObject.subtraction(firstNumber, secondNumber);
+	    		System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
 	    		break;
 	    	case "*":
 	    		break;
