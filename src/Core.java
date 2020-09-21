@@ -24,7 +24,10 @@ public class Core {
 	    		break;
 	    	case "-":
 	    		break;
-	    	case "*":
+			case "*":
+				Multiplication myObject = new Multiplication();
+				finalNumber = myObject.multiplication(firstNumber, secondNumber);
+				System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
 	    		break;
     		default:
     			System.out.print("Looks like we can not find the operation you entered. Please try again.");
