@@ -26,8 +26,13 @@ public class Core {
 	    		System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
 	    		break;
 	    	case "-":
+	    		Subtraction myObject = new Subtraction();
+	    		finalNumber = myObject.subtraction(firstNumber, secondNumber);
+	    		System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
 	    		break;
-	    	case "*":
+			  case "*":
+				  finalNumber = Multiplication.multiplication(firstNumber, secondNumber);
+				  System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
 	    		break;
     		default:
     			System.out.print("Looks like we can not find the operation you entered. Please try again.");
