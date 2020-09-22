@@ -18,18 +18,21 @@ public class Core {
 	    
 	    input.close(); //Close Scanner
 	    int finalNumber = 0; //prep variable for use
-	  //Switch case for future use. Each case will create an object to complete the operation, complete said operation, and put results into finalNumber variable
+	    //Switch case for future use. Each case will create an object to complete the operation, complete said operation, and put results into finalNumber variable
 	    switch (operation){ 
 	    	case "+":
+	    		Addition myObject = new Addition();
+	    		finalNumber = myObject.addition(firstNumber, secondNumber);
+	    		System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
 	    		break;
 	    	case "-":
 	    		Subtraction myObject = new Subtraction();
 	    		finalNumber = myObject.subtraction(firstNumber, secondNumber);
 	    		System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
 	    		break;
-			case "*":
-				finalNumber = Multiplication.multiplication(firstNumber, secondNumber);
-				System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
+			  case "*":
+				  finalNumber = Multiplication.multiplication(firstNumber, secondNumber);
+				  System.out.print(equation(operation, firstNumber, secondNumber, finalNumber));
 	    		break;
     		default:
     			System.out.print("Looks like we can not find the operation you entered. Please try again.");
